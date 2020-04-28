@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
@@ -45,10 +45,6 @@ export default function MovieCard(props) {
     setExpanded(!expanded);
   };
 
-  const clickHandler = () => {
-    console.log(props);
-  };
-
   const favoriteHandler = () =>{
     console.log(props);
   };
@@ -64,9 +60,9 @@ export default function MovieCard(props) {
         title={props.title}
         subheader={"In theaters "+props.release}
       />
-      <Link to="/favorites"><CardMedia onClick={clickHandler}
+      <Link to={"/movieinfo/"+props.id}><CardMedia 
         className={classes.media}
-        image={'http://image.tmdb.org/t/p/w500/'+props.image}
+        image={'http://image.tmdb.org/t/p/w185/'+props.image}
         title={props.title}
       /></Link>
       <CardActions disableSpacing>

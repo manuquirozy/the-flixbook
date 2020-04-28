@@ -22,7 +22,8 @@ class MovieList extends React.Component {
       return (
         <div className="MovieContainer">
           {this.state.movies.map((movie,i) => <MovieCard key={'movie_'+i} title={movie.original_title} 
-          rating={movie.vote_average} overview={movie.overview} release={movie.release_date} image={movie.poster_path}/>)}
+          rating={movie.vote_average} overview={movie.overview} release={movie.release_date} 
+          image={movie.poster_path} id={movie.id}/>)}
         </div>
       );
     }

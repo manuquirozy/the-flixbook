@@ -12,21 +12,13 @@ function App() {
     <Router>
     <div className="App">
     <header className="App-header">
-        <NavBar/>
+      <NavBar/>
     </header>
       <Switch>
-          <Route exact path="/">
-            <MovieList />
-          </Route>
-          <Route path="/favorites">
-            <Favorites />
-          </Route>
-          <Route path="/search">
-            <Search />
-          </Route>
-          <Route path="/movieinfo">
-            <MovieInfo />
-          </Route>
+          <Route exact path="/" component={MovieList}/>
+          <Route exact path="/favorites" component={Favorites}/>
+          <Route exact path="/search" component={Search}/>
+          <Route exact path="/movieinfo/:id" component={MovieInfo}/>
       </Switch>
     </div>
     </Router>
