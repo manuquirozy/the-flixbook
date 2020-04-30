@@ -42,7 +42,7 @@ export default function RelatedMovies(props) {
                 <Link to={{ pathname: "/movieinfo/" + tile.id, props: {id: tile.id}}} >
                 <img  src={"https://image.tmdb.org/t/p/w300"+tile.backdrop_path} alt={tile.name} /></Link>
             <GridListTileBar
-              title={tile.original_title}
+              title={tile.title}
               classes={{
                 root: classes.titleBar,
                 title: classes.title,

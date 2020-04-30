@@ -52,7 +52,7 @@ class MovieInfo extends React.Component {
                     <img className="Poster" src={'http://image.tmdb.org/t/p/w342/' + this.state.movie.poster_path} alt="movie poster" />
                     <div className="MainInfo">
                         <div className="MovieHeader">
-                            <h1 className="MovieTitle">{this.state.movie.original_title}</h1>
+                            <h1 className="MovieTitle">{this.state.movie.title}</h1>
                         </div>
                         <div className="CircleRating"><div className="CircleText">{this.state.movie.vote_average}</div></div> 
                         <span className="Tagline">{this.state.movie.tagline}</span>

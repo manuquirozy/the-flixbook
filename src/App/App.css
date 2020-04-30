@@ -210,6 +210,9 @@ h1, .Tagline, .MovieTitle {
     flex-direction: column;
   }
   .Poster{
-    margin: auto;
+    margin: 40px auto;
+  }
+  .Footer{
+    height: 100px;
   }
 }

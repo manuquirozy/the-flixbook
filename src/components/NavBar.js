@@ -92,7 +92,7 @@ export default function NavBar() {
       <AppBar position="fixed">
         <Toolbar>
           <div className={classes.title} variant="h6" nowrap='true'>
-            <Link to="/"><img src={require("./logo.png")} alt="logo" className="logo" /></Link>
+            <Link to="/the-flixbook"><img src={require("./logo.png")} alt="logo" className="logo" /></Link>
           </div>
           <div className={classes.search}>
             <div className={classes.searchIcon}>

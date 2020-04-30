@@ -17,7 +17,7 @@ function App() {
       <NavBar/>
     </header>
       <Switch>
-          <Route exact path="/" component={Home}/>
+          <Route exact path="/the-flixbook" component={Home}/>
           <Route exact path="/favorites" component={Favorites}/>
           <Route exact path="/search/:id" component={Search}/>
           <Route exact path="/movieinfo/:id" component={MovieInfo} />
