@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/the-flixbook/static/css/main.be18f5a4.chunk.css",
+    "main.js": "/the-flixbook/static/js/main.bdd8ca22.chunk.js",
+    "main.js.map": "/the-flixbook/static/js/main.bdd8ca22.chunk.js.map",
+    "runtime-main.js": "/the-flixbook/static/js/runtime-main.d4268789.js",
+    "runtime-main.js.map": "/the-flixbook/static/js/runtime-main.d4268789.js.map",
+    "static/js/2.4fa38ef2.chunk.js": "/the-flixbook/static/js/2.4fa38ef2.chunk.js",
+    "static/js/2.4fa38ef2.chunk.js.map": "/the-flixbook/static/js/2.4fa38ef2.chunk.js.map",
+    "index.html": "/the-flixbook/index.html",
+    "precache-manifest.086fd3e66418d96f8ccdaeeb647be292.js": "/the-flixbook/precache-manifest.086fd3e66418d96f8ccdaeeb647be292.js",
+    "service-worker.js": "/the-flixbook/service-worker.js",
+    "static/css/main.be18f5a4.chunk.css.map": "/the-flixbook/static/css/main.be18f5a4.chunk.css.map",
+    "static/js/2.4fa38ef2.chunk.js.LICENSE.txt": "/the-flixbook/static/js/2.4fa38ef2.chunk.js.LICENSE.txt",
+    "static/media/logo.png": "/the-flixbook/static/media/logo.4e897b05.png",
+    "static/media/logoTMDB.svg": "/the-flixbook/static/media/logoTMDB.31d26327.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d4268789.js",
+    "static/js/2.4fa38ef2.chunk.js",
+    "static/css/main.be18f5a4.chunk.css",
+    "static/js/main.bdd8ca22.chunk.js"
+  ]
+}
