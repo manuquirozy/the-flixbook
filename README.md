@@ -1,7 +1,7 @@
-#To run this project:
+# To run this project:
 
 install dependencies
-#npm install
+# npm install
 
 serve with at localhost:3000
-#npm start
+# npm start
