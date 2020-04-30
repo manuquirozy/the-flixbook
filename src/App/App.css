@@ -8,25 +8,6 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 span.MuiTypography-root.MuiCardHeader-title.MuiTypography-body2.MuiTypography-displayBlock {
   font-size: 1rem;
   font-weight: bold;
@@ -41,6 +22,7 @@ span.MuiTypography-root.MuiCardHeader-subheader.MuiTypography-body2.MuiTypograph
   height: 30px;
   font-size: 1rem;
   background: black;
+  font-weight: bold;
 }
 
 .MuiCardHeader-root{
@@ -51,7 +33,7 @@ span.MuiTypography-root.MuiCardHeader-subheader.MuiTypography-body2.MuiTypograph
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 90px;
+  margin-top: 80px;
   justify-content: center;
 }
 
@@ -61,7 +43,14 @@ span.MuiTypography-root.MuiCardHeader-subheader.MuiTypography-body2.MuiTypograph
 }
 
 .MovieInfoContainer{
-  margin-top: 90px;
+  margin-top: 80px;
+  position: relative;
+}
+
+@media (max-width: 600px) {
+  .MovieInfoContainer, .MovieContainer {
+    margin-top: 45px;
+  }
 }
 
 .MuiToolbar-root.MuiToolbar-regular.MuiToolbar-gutters{
@@ -73,13 +62,13 @@ span.MuiTypography-root.MuiCardHeader-subheader.MuiTypography-body2.MuiTypograph
   display: block;
 }
 
-.MuiInputBase-input.makeStyles-inputInput-7{
+.MuiInputBase-input{
   color: black;
   font-weight: 500;
   float: right;
 }
 
-.MuiInputBase-root.makeStyles-inputRoot-5{
+.MuiInputBase-root{
   float: right;
 }
 
@@ -90,30 +79,119 @@ span.MuiTypography-root.MuiCardHeader-subheader.MuiTypography-body2.MuiTypograph
 .MovieTitle{
   font-weight: bold;
   font-size: 2rem;
+  width: 100%;
 }
 
 .MainContainer{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin: 20px;
+  
 }
 
 .Poster{
-  width: 250px;
-  margin: auto;
+  width: 300px;
+  height: 450px;
+  margin: 40px 20px;
+  z-index: 1;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 }
 
 .CircleRating{
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   background-color: black;
   color: white;
-  border-radius: 15px;
+  border-radius: 20px;
   position: relative;
+  font-weight: bold;
+  margin: 0 auto;
+  font-size: 1.2rem;
 }
 
 .CircleText{
   position: absolute;
   bottom: 20%;
   width: 100%;
+}
+
+.Backdrop{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+  opacity: 0.3;
+}
+
+h1, .Tagline, .MovieTitle {
+  z-index: 1;
+}
+
+.MuiGridListTile-root{
+  height: auto !important;
+  width: auto !important;
+}
+
+.MovieVideos{
+  height: auto !important;
+  width: auto !important;
+}
+
+.Bolder{
+  font-weight: bold;
+}
+
+.Genres{
+  display:flex;
+  flex-direction: column;
+}
+
+.MuiGridListTileBar-title{
+  color:white !important;
+  height: auto;
+  overflow: visible;
+  white-space: normal;
+  font-size: 0.8rem;
+}
+
+.material-icons.MuiIcon-root{
+  color: white;
+}
+
+.FullReview{
+  overflow-y: scroll;
+  max-height: 100px;
+  margin: 30px;
+}
+
+.MainInfo{
+  display: flex;
+  flex-direction: column;
+}
+
+.MovieHeader{
+  display: flex;
+  flex-direction: row;
+}
+
+.BigReview, .Overview{
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  margin: 20px;
+  padding: 10px;
+}
+
+.ReviewTitle, h1{
+  background-color: #D4E0FA;
+  border-radius: 5px;
+}
+
+.Tagline, .Genres{
+  margin: 10px;
+  color: black;
 }

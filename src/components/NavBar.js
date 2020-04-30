@@ -1,14 +1,16 @@
-import React from 'react';
-import {Link} from "react-router-dom";
+import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
 import InputBase from '@material-ui/core/InputBase';
 import { fade, makeStyles } from '@material-ui/core/styles';
-import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
+import {Redirect} from 'react-router-dom';
+import ReactDOM from 'react-dom';
+import MovieList from '../components/MovieList'
+import Search from '../components/Search'
+
+const API_KEY = process.env.REACT_APP_TMDB_API_KEY;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -49,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
     color: 'black',
   },
   inputRoot: {
-    color: 'inherit',
+    color: 'black',
   },
   inputInput: {
     padding: theme.spacing(1, 1, 1, 0),
@@ -67,55 +69,41 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function NavBar() {
+  const [value, setValue] = useState(0);
   const classes = useStyles();
+  const [onEnter, setOnEnter] = useState(false);
 
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  function onChange(event) {
+    console.log(event.target.value)
+  }
 
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
+  function keyPressed(event) {
+    if (event.key === "Enter") {
+      let value = event.target.value.replace(/ /g,"+");
+      setValue(value);
+      setOnEnter(true);
+      console.log(value);
+    }
+  }
 
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+  function renderRedirect (){
+    if (onEnter) {
+      return <Redirect to={'/search/'+value} />      
+    }
+  }
 
   return (
     <div className={classes.root}>
       <AppBar position="fixed">
         <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="open drawer"
-            aria-controls="simple-menu" 
-            aria-haspopup="true" 
-            onClick={handleClick}
-          >
-            <MenuIcon />
-          </IconButton>
-          <div>
-            <Menu
-              id="simple-menu"
-              anchorEl={anchorEl}
-              keepMounted
-              open={Boolean(anchorEl)}
-              onClose={handleClose}
-            >
-              <MenuItem onClick={handleClose}><Link to="/"  style={{ textDecoration: 'none'}}>Home</Link></MenuItem>
-              <MenuItem onClick={handleClose}><Link to="/favorites" style={{ textDecoration: 'none'}}>Favorites</Link></MenuItem>
-              <MenuItem onClick={handleClose}>Movies</MenuItem>
-              <MenuItem onClick={handleClose}>Series</MenuItem>
-            </Menu>
-          </div>
           <div className={classes.title} variant="h6" nowrap='true'>
-          <Link to="/"><img src= {require("./logo.png")} alt="logo" className="logo"/></Link>
+            <Link to="/"><img src={require("./logo.png")} alt="logo" className="logo" /></Link>
           </div>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
             </div>
-            <InputBase
+            <InputBase onChange={onChange} onKeyPress={keyPressed}
               placeholder="Search…"
               classes={{
                 root: classes.inputRoot,
@@ -124,6 +112,7 @@ export default function NavBar() {
               inputProps={{ 'aria-label': 'search' }}
             />
           </div>
+          <div>{renderRedirect()}</div>
         </Toolbar>
       </AppBar>
     </div>
