@@ -47,12 +47,6 @@ span.MuiTypography-root.MuiCardHeader-subheader.MuiTypography-body2.MuiTypograph
   position: relative;
 }
 
-@media (max-width: 600px) {
-  .MovieInfoContainer, .MovieContainer {
-    margin-top: 45px;
-  }
-}
-
 .MuiToolbar-root.MuiToolbar-regular.MuiToolbar-gutters{
   background-color: #D4E0FA;
 }
@@ -205,4 +199,17 @@ h1, .Tagline, .MovieTitle {
 .logoTMDB{
   height: 16px;
   margin: auto;
+}
+
+@media (max-width: 600px) {
+  .MovieInfoContainer, .MovieContainer {
+    margin-top: 45px;
+  }
+  .MainContainer{
+    display: flex;
+    flex-direction: column;
+  }
+  .Poster{
+    margin: auto;
+  }
 }
