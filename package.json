@@ -1,4 +1,5 @@
 {
+  "homepage": "http://manuquirozy.github.io/the-flixbook",
   "name": "the-flixbook",
   "version": "0.1.0",
   "private": true,
@@ -20,6 +21,8 @@
     "styled-components": "^5.1.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -45,6 +48,7 @@
     "babel-loader": "^8.1.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
-    "eslint-plugin-react-hooks": "^3.0.0"
+    "eslint-plugin-react-hooks": "^3.0.0",
+    "gh-pages": "^2.2.0"
   }
 }
