@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1ea61d7246549740439274ae98f396de",
+    "revision": "1254ff4b84b9de3d8437c0c9f39861ac",
     "url": "/the-flixbook/index.html"
   },
   {
-    "revision": "29d2e41178a531a20ebd",
-    "url": "/the-flixbook/static/css/main.be18f5a4.chunk.css"
+    "revision": "fbf08933a607847eb1f6",
+    "url": "/the-flixbook/static/css/main.a92feb5e.chunk.css"
   },
   {
     "revision": "72aaadc953a8b8345dad",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/the-flixbook/static/js/2.4fa38ef2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "29d2e41178a531a20ebd",
+    "revision": "fbf08933a607847eb1f6",
     "url": "/the-flixbook/static/js/main.bdd8ca22.chunk.js"
   },
   {
