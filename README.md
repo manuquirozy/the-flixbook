@@ -1,7 +1,7 @@
-To run this project:
+#To run this project:
 
-# install dependencies
-npm install
+install dependencies
+#npm install
 
-# serve with hot reload at localhost:3000
-npm start
+serve with at localhost:3000
+#npm start
