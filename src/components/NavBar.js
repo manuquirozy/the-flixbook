@@ -6,11 +6,6 @@ import InputBase from '@material-ui/core/InputBase';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import SearchIcon from '@material-ui/icons/Search';
 import {Redirect} from 'react-router-dom';
-import ReactDOM from 'react-dom';
-import MovieList from '../components/MovieList'
-import Search from '../components/Search'
-
-const API_KEY = process.env.REACT_APP_TMDB_API_KEY;
 
 const useStyles = makeStyles((theme) => ({
   root: {
